@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.coderslab.converter.AdviceConverter;
 import pl.coderslab.model.Advice;
-import pl.coderslab.model.AdviceDto;
+import pl.coderslab.modelDto.AdviceDto;
 import pl.coderslab.service.AdviceService;
 
 import java.util.List;

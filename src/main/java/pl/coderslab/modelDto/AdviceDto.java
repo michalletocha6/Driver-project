@@ -1,6 +1,7 @@
-package pl.coderslab.model;
+package pl.coderslab.modelDto;
 
 import lombok.Data;
+import pl.coderslab.modelDto.MediaDto;
 
 @Data
 public class AdviceDto {
@@ -11,4 +12,6 @@ public class AdviceDto {
     private String content;
 
     private MediaDto media;
+
+    private QuizDto quiz;
 }

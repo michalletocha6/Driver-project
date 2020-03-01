@@ -3,7 +3,7 @@ package pl.coderslab.converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import pl.coderslab.model.Advice;
-import pl.coderslab.model.AdviceDto;
+import pl.coderslab.modelDto.AdviceDto;
 
 @Service
 public class AdviceConverter {

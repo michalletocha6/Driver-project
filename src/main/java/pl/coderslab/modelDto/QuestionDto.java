@@ -1,6 +1,9 @@
 package pl.coderslab.modelDto;
 
 import lombok.Data;
+import pl.coderslab.model.Answer;
+
+import java.util.List;
 
 @Data
 public class QuestionDto {
@@ -8,5 +11,5 @@ public class QuestionDto {
 
     private String description;
 
-//    private List<Answer> answers;
+    private List<Answer> answers;
 }

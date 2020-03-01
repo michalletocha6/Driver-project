@@ -14,8 +14,8 @@ public class AdviceService {
         this.adviceRepository = adviceRepository;
     }
 
-    public void createAdvice(Advice advice) {
-        adviceRepository.save(advice);
+    public Advice createAdvice(Advice advice) {
+        return adviceRepository.save(advice);
     }
 
     public Advice readAdvice(Long id) {

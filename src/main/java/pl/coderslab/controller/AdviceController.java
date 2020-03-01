@@ -1,6 +1,8 @@
 package pl.coderslab.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.coderslab.converter.AdviceConverter;
 import pl.coderslab.model.Advice;
@@ -24,6 +26,18 @@ public class AdviceController {
     public List<AdviceDto> getAdviceList() {
         List<Advice> advices = adviceService.readAllAdvices();
         return advices.stream().map(adviceConverter::convertToDto).collect(Collectors.toList());
+    }
+
+    @GetMapping("/advice/{id}")
+    public AdviceDto getAdvice(@PathVariable Long id) {
+        return adviceConverter.convertToDto(adviceService.readAdvice(id));
+    }
+
+    @GetMapping("/createAdvice")
+    public AdviceDto createAdvice(@RequestBody AdviceDto adviceDto) {
+        Advice advice = adviceConverter.convertToEntity(adviceDto);
+        Advice adviceCreated = adviceService.createAdvice(advice);
+        return adviceConverter.convertToDto(adviceCreated);
     }
 
 }

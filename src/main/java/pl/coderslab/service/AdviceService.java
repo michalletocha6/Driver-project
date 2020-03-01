@@ -1,6 +1,5 @@
 package pl.coderslab.service;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import pl.coderslab.model.Advice;
 import pl.coderslab.repository.AdviceRepository;
@@ -10,11 +9,9 @@ import java.util.List;
 @Service
 public class AdviceService {
     private final AdviceRepository adviceRepository;
-    private final ModelMapper modelMapper;
 
-    public AdviceService(AdviceRepository adviceRepository, ModelMapper modelMapper) {
+    public AdviceService(AdviceRepository adviceRepository) {
         this.adviceRepository = adviceRepository;
-        this.modelMapper = modelMapper;
     }
 
     public void createAdvice(Advice advice) {

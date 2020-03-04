@@ -2,6 +2,7 @@ package pl.coderslab.service;
 
 import org.springframework.stereotype.Service;
 import pl.coderslab.model.Advice;
+import pl.coderslab.model.AdviceShort;
 import pl.coderslab.repository.AdviceRepository;
 
 import java.util.List;
@@ -14,19 +15,20 @@ public class AdviceService {
         this.adviceRepository = adviceRepository;
     }
 
-    public Advice createAdvice(Advice advice) {
-        return adviceRepository.save(advice);
-    }
+//    public Advice createAdvice(Advice advice) {
+//        return adviceRepository.save(advice);
+//    }
 
-    public Advice readAdvice(Long id) {
-        return adviceRepository.findById(id).get();
-    }
+//    public Advice readAdvice(Long id) {
+//        return adviceRepository.findById(id).get();
+//    }
 
-    public List<Advice> readAllAdvices() {
+    public List<AdviceShort> readAllAdvices() {
+
         return adviceRepository.findAll();
     }
 
-    public void deleteAdvice(Advice advice) {
-        adviceRepository.delete(advice);
-    }
+//    public void deleteAdvice(Advice advice) {
+//        adviceRepository.delete(advice);
+//    }
 }

@@ -1,32 +1,19 @@
 package pl.coderslab.model;
 
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
-import java.time.LocalDate;
 
+
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "advices")
 @Data
-public class Advice {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String title;
-
-    private String content;
-
-    @DateTimeFormat(pattern = "YYYY-MM-DD")
-    private LocalDate created;
+public class Advice extends AbstractAdvice {
 
     @OneToOne
     @JoinColumn(name = "media_id")
@@ -36,8 +23,4 @@ public class Advice {
     @JoinColumn(name = "quiz_id")
     private Quiz quiz;
 
-    @PrePersist
-    public void prePersist() {
-        created = LocalDate.now();
-    }
 }

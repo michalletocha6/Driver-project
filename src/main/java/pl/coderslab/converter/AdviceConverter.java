@@ -3,6 +3,7 @@ package pl.coderslab.converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import pl.coderslab.model.Advice;
+import pl.coderslab.model.AdviceShort;
 import pl.coderslab.modelDto.AdviceDto;
 
 @Service
@@ -13,7 +14,7 @@ public class AdviceConverter {
         this.modelMapper = modelMapper;
     }
 
-    public AdviceDto convertToDto(Advice advice) {
+    public AdviceDto convertToDto(AdviceShort advice) {
         return modelMapper.map(advice, AdviceDto.class);
     }
 

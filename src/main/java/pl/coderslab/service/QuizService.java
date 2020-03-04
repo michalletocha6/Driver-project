@@ -14,8 +14,8 @@ public class QuizService {
         this.quizRepository = quizRepository;
     }
 
-    public void createQuiz(Quiz quiz) {
-        quizRepository.save(quiz);
+    public Quiz createQuiz(Quiz quiz) {
+        return quizRepository.save(quiz);
     }
 
     public Quiz readQuiz(Long id) {

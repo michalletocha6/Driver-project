@@ -14,8 +14,8 @@ public class QuestionService {
         this.questionRepository = questionRepository;
     }
 
-    public void createQuestion(Question question) {
-        questionRepository.save(question);
+    public Question createQuestion(Question question) {
+        return questionRepository.save(question);
     }
 
     public Question readQuestion(Long id) {

@@ -2,6 +2,7 @@ package pl.coderslab.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.coderslab.converter.AdviceConverter;
@@ -33,11 +34,16 @@ public class AdviceController {
         return adviceConverter.convertToDto(adviceService.readAdvice(id));
     }
 
-    @GetMapping("/createAdvice")
+    @PostMapping("/createAdvice")
     public AdviceDto createAdvice(@RequestBody AdviceDto adviceDto) {
         Advice advice = adviceConverter.convertToEntity(adviceDto);
         Advice adviceCreated = adviceService.createAdvice(advice);
         return adviceConverter.convertToDto(adviceCreated);
+    }
+
+    @GetMapping("/removeAdvice/{id}")
+    public void removeAdvice(@PathVariable Long id) {
+        adviceService.deleteAdvice(adviceService.readAdvice(id));
     }
 
 }

@@ -1,10 +1,15 @@
 # Driver quiz - second portfolio project with CodersLab
 
-This is Rest Api with driver quiz.
+This is Rest Api application with driver quiz. Contains basic CRUD operations.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To open project on intellij IDEA:
+ - clone this repository
+ ```
+ git clone repo-url
+ ```
+ - open intellij, go to File, Open with existing sources, choose folder with cloned repo and open it.
 
 ### Prerequisites
 

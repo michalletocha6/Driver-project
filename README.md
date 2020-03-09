@@ -9,7 +9,11 @@ To open project on intellij IDEA:
  ```
  git clone repo-url
  ```
- - open intellij, go to File, Open with existing sources, choose folder with cloned repo and open it.
+ - open intellij
+ - go to File
+ - Open with existing sources
+ - choose folder with cloned repo
+ - open it
 
 ### Prerequisites
 

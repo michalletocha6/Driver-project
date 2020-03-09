@@ -19,7 +19,7 @@ To open project on intellij IDEA:
  ```
  http://localhost:8080
  ```
- For testing go to: 
+ To see and test json in action go to:
  ```
  http://localhost:8080/swagger-ui.html#/
  ```
